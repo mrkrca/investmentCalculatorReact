@@ -23,7 +23,7 @@ function handleInputChange(event){
 const {name, value} = event.target;
   setInvestment({
       ...investment,
-      [name]: +value
+      [name]: value
   });
   console.log(investment);
 }
