@@ -8,7 +8,8 @@ export default function Results({ investment, result }) {
           <th>Year</th>
           <th>Interest</th>
           <th>Value at End of Year</th>
-          <th>Annual Investment</th>
+          <th>Total Intrest</th>
+          <th>Total Invested</th>
         </tr>
       </thead>
       <tbody className="center">
@@ -17,7 +18,8 @@ export default function Results({ investment, result }) {
             <td>{data.year}</td>
             <td>{formattedCurrency.format(Math.round(data.interest))}</td>
             <td>{formattedCurrency.format(Math.round(data.valueEndOfYear))}</td>
-            <td>{formattedCurrency.format(Math.round(data.annualInvestment))}</td>
+            <td>{formattedCurrency.format(Math.round(data.totalIntrest))}</td>
+            <td>{formattedCurrency.format(Math.round(data.total))}</td>
           </tr>
         ))}
       </tbody>

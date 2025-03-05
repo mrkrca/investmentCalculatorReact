@@ -16,20 +16,23 @@ const [investment, setInvestment] = useState({
   initialInvestment: 0,
   annualInvestment: 0,
   expectedReturn: 0,
+  total: 0,
   duration: 0,
 });  
+
 
 function handleInputChange(event){
 const {name, value} = event.target;
   setInvestment({
       ...investment,
-      [name]: value
+      [name]: +value
+
   });
   console.log(investment);
 }
 
 
-const result = calculateInvestmentResults(investment);
+
 
 
 useEffect(() => {   
@@ -37,6 +40,14 @@ useEffect(() => {
   
 }, [investment]);
 
+const [totalInvested, setTotalInvested] = useState(0)
+const [totalInt, setTotalIntrest] = useState(0)
+
+const result = calculateInvestmentResults({
+  ...investment,
+  totalInvested,
+  totalInt,
+});
 
 
   return (
