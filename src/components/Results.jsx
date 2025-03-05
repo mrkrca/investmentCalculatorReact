@@ -1,8 +1,9 @@
 import { formattedCurrency } from "../util/investment";
 
-export default function Results({ investment, result }) {
+export default function Results({ investment, result, isInputValid }) {
   return (
     <table id="result" >
+      
       <thead>
         <tr>
           <th>Year</th>
@@ -13,6 +14,7 @@ export default function Results({ investment, result }) {
         </tr>
       </thead>
       <tbody className="center">
+        
         {result.map((data) => (
           <tr key={data.year}>
             <td>{data.year}</td>

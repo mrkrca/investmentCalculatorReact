@@ -20,6 +20,7 @@ const [investment, setInvestment] = useState({
   duration: 0,
 });  
 
+const isInputValid = investment.duration >= 1;
 
 function handleInputChange(event){
 const {name, value} = event.target;
@@ -58,10 +59,12 @@ const result = calculateInvestmentResults({
 
 
       />
-      <Results
+      {isInputValid ?  <Results
       investment={investment}
       result={result}
-      />
+      isInputValid={isInputValid}
+      /> : <p className="center">Duration of Investment must be greater than ZERO</p>}
+     
     </>
   
     
