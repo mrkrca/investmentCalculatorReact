@@ -10,7 +10,7 @@ export default defineConfig({
   },
   preview: {
     port: 4173,
-    allowedHosts: ['nvestmentcalculatorreact-production.up.railway.app']
+    allowedHosts: ['investmentcalculatorreact-production.up.railway.app']
   },
   build: {
     outDir: 'dist'
