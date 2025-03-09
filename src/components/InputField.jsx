@@ -1,5 +1,4 @@
-import { use } from "react";
-import { useState, useEffect } from "react"
+
 
 export default function InputField({handleInputChange, investment}) {
 
