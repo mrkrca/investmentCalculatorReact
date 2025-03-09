@@ -1,6 +1,6 @@
 
 
-export default function InputField({handleInputChange, investment}) {
+export default function InputHandler({handleInputChange, investment}) {
 
 
     return (

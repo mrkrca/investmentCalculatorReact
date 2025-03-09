@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import "./index.css"
-import InputField from "./components/inputField"
+import InputField from "./components/InputHandler"
 import Results from "./components/Results"
 import  {calculateInvestmentResults} from "./util/investment"
 
